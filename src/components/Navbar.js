@@ -4,17 +4,17 @@ import { NavLink, useHistory } from "react-router-dom";
 const linkStyles = {
   width: "100px",
   padding: "12px",
-  margin: "0 6px 6px",
+  margin: "0 8px 8px",
   background: "blue",
   textDecoration: "none",
   color: "white",
 };
 
-function Navbar({ setIsLoggedIn }) {
+function Navbar({ onLogin }) {
   const history = useHistory();
 
   function handleLogout() {
-    setIsLoggedIn(false);
+    onLogin(false);
     history.push("/login");
   }
 
